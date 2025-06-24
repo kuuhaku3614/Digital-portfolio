@@ -442,6 +442,7 @@ body.dark-theme {
     background-position: center;
     position: relative;
     overflow: hidden;
+    cursor: pointer; /* <-- New style */
 }
 
 .project-overlay {

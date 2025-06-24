@@ -45,6 +45,8 @@ function initializePage() {
     initThemeToggle();
     initCustomModalsAndAlerts();
     initExpandableCards();
+    initCvDownload(); // <-- New function call
+    initProjectImageClick(); // <-- New function call
 }
 
 
@@ -282,7 +284,7 @@ function showCustomAlert(message) {
 }
 
 /**
- * NEW: Initializes "Show More" / "Show Less" functionality for cards.
+ * Initializes "Show More" / "Show Less" functionality for cards.
  */
 function initExpandableCards() {
     const contentElements = document.querySelectorAll('.expandable-content');
@@ -323,6 +325,54 @@ function initExpandableCards() {
                 });
             }
         }, 300); 
+    });
+}
+
+/**
+ * NEW: Initializes the CV download functionality.
+ */
+function initCvDownload() {
+    const downloadButton = document.getElementById('downloadCvBtn');
+    if (downloadButton) {
+        downloadButton.addEventListener('click', () => {
+            const link = document.createElement('a');
+            link.href = 'GERBY-CV-1.docx'; // Path to your CV file
+            link.download = 'Gerby-Hallasgo-CV.docx'; // The filename for the user
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    }
+}
+
+/**
+ * NEW: Makes project images clickable to open in a new tab.
+ */
+function initProjectImageClick() {
+    const projectImages = document.querySelectorAll('.project-image');
+    projectImages.forEach(imageContainer => {
+        imageContainer.addEventListener('click', (e) => {
+            // Prevent clicks on overlay icons from triggering this
+            if (e.target.closest('.project-overlay')) {
+                return;
+            }
+
+            let imageUrl = '';
+            const imgElement = imageContainer.querySelector('img');
+
+            if (imgElement) {
+                // Case 1: The image is an <img> tag
+                imageUrl = imgElement.src;
+            } else if (imageContainer.style.backgroundImage) {
+                // Case 2: The image is a CSS background-image
+                // Extracts URL from 'url("...")'
+                imageUrl = imageContainer.style.backgroundImage.slice(5, -2);
+            }
+
+            if (imageUrl) {
+                window.open(imageUrl, '_blank');
+            }
+        });
     });
 }
 
