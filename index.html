@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciao's Online Portfolio</title>
+    <meta name="description" content="Senior Full-Stack Developer specializing in modern web technologies, cloud architecture, and scalable applications.">
+    <meta property="og:title" content="Hallasgo, Gerby">
+    <meta property="og:description" content="Crafting exceptional digital experiences with cutting-edge technology">
+    <meta property="og:type" content="website">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="text-center">
+            <div class="loading-text">Compiling portfolio...</div>
+            <div class="loading-bar">
+                <div class="loading-progress" id="loadingProgress"></div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#home">&lt;/Ciao&gt;</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <button class="theme-toggle ms-3" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 hero-content">
+                    <h1 class="hero-title">Gerby Hallasgo</h1>
+                    <p class="hero-subtitle">
+                        <span class="typing-text" id="typingText"></span>
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button class="btn btn-primary-custom">
+                            <i class="fas fa-download me-2"></i>Download Resume
+                        </button>
+                        <button class="btn btn-outline-custom" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });">
+                            <i class="fas fa-code me-2"></i>View Projects
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="floating-code">const developer = new FullStackEngineer();</div>
+        <div class="floating-code">await skills.master(['React', 'Node.js', 'Python']);</div>
+        <div class="floating-code">console.log('Building the future...');</div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-4 text-center fade-in">
+                    <div class="profile-photo-container">
+                        <img src="uploads/profile/profile.jpg" alt="Gerby Hallasgo" class="profile-photo img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 fade-in" style="transition-delay: 200ms;">
+                    <div class="about-content">
+                        <p>
+                            Hello! I'm Gerby Hallasgo, a passionate and dedicated Computer Science student at Western Mindanao State University, expected to graduate in 2025-2026. I'm currently building a strong foundation in programming, database management, and software engineering principles, eager to apply my learning to real-world challenges.
+                        </p>
+                        <p>
+                            My journey into software development has been marked by hands-on academic projects. I've developed a comprehensive Gym Membership Management System applying core software engineering practices, and a Social Welfare Program Member Management System focusing on robust database design and efficient data handling.
+                        </p>
+                        <p>
+                            Beyond these major projects, I've also explored various domains, creating a Supermarket Checkout Simulation to visualize complex system dynamics, an interactive Face Recognition Tic-Tac-Toe game showcasing computer vision integration, a Gourmet Guide for recipe management, and a social-media-infused Roadmap web platform for discovering Philippine tourist spots. I am always keen on exploring new technologies and expanding my skill set.
+                        </p>
+                        <p>
+                            I'm excited to continue growing as a developer and contribute to impactful projects. Let's connect and explore opportunities to innovate together!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card glass fade-in">
+                    <div class="skill-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h3 class="skill-name">PHP</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" data-width="70"></div>
+                    </div>
+                    <small class="tech-badge">Advanced - 3+ years</small>
+                </div>
+                <div class="skill-card glass fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="skill-name">HTML/CSS/JS</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" data-width="70"></div>
+                    </div>
+                    <small class="tech-badge">Advanced - 3+ years</small>
+                </div>
+                <div class="skill-card glass fade-in">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3 class="skill-name">Python</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" data-width="20"></div>
+                    </div>
+                    <small class="tech-badge">Beginner - 1+ years</small>
+                </div>
+                <div class="skill-card glass fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="skill-name">Database Management</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" data-width="70"></div>
+                    </div>
+                    <small class="tech-badge">Advanced - 3+ years</small>
+                </div>
+                <div class="skill-card glass fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="skill-name">Web Development</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" data-width="70"></div>
+                    </div>
+                    <small class="tech-badge">Advanced - 3+ years</small>
+                </div>
+                <div class="skill-card glass fade-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <h3 class="skill-name">Prompt Engineering</h3>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" data-width="70"></div>
+                    </div>
+                    <small class="tech-badge">Advanced - 3+ years</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title fade-in">My Recent Projects</h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="project-card glass fade-in">
+                   <div class="project-image">
+                        <img src="uploads/projects/gym1.png" alt="Image for E-commerce Platform" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a class="project-link no-link-popup" aria-label="Live Preview">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a class="project-link no-link-popup" aria-label="GitHub Repository">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content expandable-content">
+                        <h3 class="project-title">Gym Membership Management System</h3>
+                        <p class="project-description">
+                           A comprehensive system designed to streamline the management of gym memberships, including member registration, attendance tracking, and payment processing.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">HTML/CSS/JS</span>
+                            <span class="tech-badge">Hostinger</span>
+                            <span class="tech-badge">My SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                   <div class="project-card glass fade-in">
+                     <div class="project-image" style="background-image: url('uploads/projects/social.png')">
+                           <div class="project-overlay">
+                               <div class="project-links">
+                                   <a class="project-link" aria-label="Live Preview" target="_blank">
+                                       <i class="fas fa-external-link-alt"></i>
+                                   </a>
+                                   <a class="project-link" aria-label="View Photos">
+                                       <i class="fas fa-images"></i>
+                                   </a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="project-content expandable-content">
+                             <h3 class="project-title">Social Welfare Program Member Management System</h3>
+                             <p class="project-description">
+                               A robust system for managing members within social welfare programs, facilitating enrollment, tracking beneficiary information, and program participation.
+                             </p>
+                             <div class="tech-stack">
+                                 <span class="tech-badge">PHP</span>
+                                 <span class="tech-badge">HTML/CSS/JS</span>
+                                 <span class="tech-badge">My SQL</span>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+
+                <div class="col-lg-4 col-md-6">
+                   <div class="project-card glass fade-in">
+                     <div class="project-image" style="background-image: url('uploads/projects/gourmet.png')">
+                           <div class="project-overlay">
+                               <div class="project-links">
+                                   <a class="project-link" aria-label="Live Preview" target="_blank">
+                                       <i class="fas fa-external-link-alt"></i>
+                                   </a>
+                                   <a class="project-link" aria-label="View Photos">
+                                       <i class="fas fa-images"></i>
+                                   </a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="project-content expandable-content">
+                             <h3 class="project-title">Gourmet Guide</h3>
+                             <p class="project-description">
+                               A comprehensive desktop application designed to help users explore and manage recipes, catering to various culinary preferences and dietary needs. It allows for efficient organization of ingredients, cooking instructions, and meal planning.
+                             </p>
+                             <div class="tech-stack">
+                                 <span class="tech-badge">Java</span>
+                                 <span class="tech-badge">Netbeans GUI</span>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+
+                <div class="col-lg-4 col-md-6">
+                   <div class="project-card glass fade-in">
+                     <div class="project-image" style="background-image: url('uploads/projects/roadmap.jpg')">
+                           <div class="project-overlay">
+                               <div class="project-links">
+                                   <a class="project-link" aria-label="Live Preview" target="_blank">
+                                       <i class="fas fa-external-link-alt"></i>
+                                   </a>
+                                   <a class="project-link" aria-label="View Photos">
+                                       <i class="fas fa-images"></i>
+                                   </a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="project-content expandable-content">
+                             <h3 class="project-title">Roadmap</h3>
+                             <p class="project-description">
+                               A dynamic web platform designed for travelers to discover and share tourist spots across the Philippines. More than just a guide, it incorporates social media features, allowing users to post their experiences, save favorite locations, and interact with a community of fellow explorers. It's built to inspire and simplify travel planning.
+                             </p>
+                             <div class="tech-stack">
+                                 <span class="tech-badge">HTML/CSS/JS</span>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+
+               <div class="col-lg-4 col-md-6">
+                   <div class="project-card glass fade-in">
+                     <div class="project-image" style="background-image: url('uploads/projects/tiktak.png')">
+                           <div class="project-overlay">
+                               <div class="project-links">
+                                   <a class="project-link" aria-label="Live Preview" target="_blank">
+                                       <i class="fas fa-external-link-alt"></i>
+                                   </a>
+                                   <a class="project-link" aria-label="View Photos">
+                                       <i class="fas fa-images"></i>
+                                   </a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="project-content expandable-content">
+                             <h3 class="project-title">Face Recognition Tik Tak Toe</h3>
+                             <p class="project-description">
+                               An innovative desktop game that reimagines the classic Tic-Tac-Toe with face recognition technology. This project allows players to control game moves using facial gestures or recognition, providing a hands-free and engaging interactive experience. It showcases the integration of computer vision for interactive application development.
+                             </p>
+                             <div class="tech-stack">
+                                 <span class="tech-badge">Python</span>
+                                 <span class="tech-badge">Tkinter Gui</span>
+                                 <span class="tech-badge">Haar cascade</span>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+
+               <div class="col-lg-4 col-md-6">
+                   <div class="project-card glass fade-in">
+                     <div class="project-image" style="background-image: url('uploads/projects/sim.png')">
+                           <div class="project-overlay">
+                               <div class="project-links">
+                                   <a class="project-link" aria-label="Live Preview" target="_blank">
+                                       <i class="fas fa-external-link-alt"></i>
+                                   </a>
+                                   <a class="project-link" aria-label="View Photos">
+                                       <i class="fas fa-images"></i>
+                                   </a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="project-content expandable-content">
+                             <h3 class="project-title">Supermarket Checkout Simulation</h3>
+                             <p class="project-description">
+                               A real-time web-based simulation of a supermarket checkout system. This project vividly visualizes customer arrivals, queue behaviors, cashier activity, and service times, allowing users to observe the dynamics as they unfold.
+                             </p>
+                             <div class="tech-stack">
+                                 <span class="tech-badge">HTML/CSS/JS</span>
+                             </div>
+                       </div>
+                   </div>
+               </div>
+        </div>
+    </div>
+</section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Professional Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item slide-in-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <h3>BS Computer Science Student</h3>
+                        <h4 class="tech-badge">Western Mindanao State University • 2022 - 2026</h4>
+                        <p>Currently pursuing a Bachelor of Science in Computer Science, gaining a strong foundation in programming, data structures, algorithms, and software development methodologies. Actively engaged in coursework and practical projects to apply theoretical knowledge.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item slide-in-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <h3>Major Project: Social Welfare Member Management System</h3>
+                        <h4 class="tech-badge">Advanced Database Management Subject • 2023 - 2024</h4>
+                        <p>Designed and implemented a database-driven social welfare member management system. This project focused on database normalization, querying, and efficient data handling to manage member information, program participation, and welfare distribution.</p>
+                        <div class="tech-stack mt-3">
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">Mysql</span>
+                            <span class="tech-badge">HTML/CSS/JS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item slide-in-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <h3>Major Project: Gym Membership Management System</h3>
+                        <h4 class="tech-badge">Software Engineering Subject • 2023 - 2025</h4>
+                        <p>Developed a comprehensive gym membership management system. This project focused on applying software engineering principles, including requirements gathering, design, development, and testing. It manages member registration, subscription plans, attendance tracking, and reporting functionalities.</p>
+                        <div class="tech-stack mt-3">
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">Mysql</span>
+                            <span class="tech-badge">HTML/CSS/JS</span>
+                            <span class="tech-badge">Hostinger</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Events & Experiences</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-card glass fade-in">
+                        <div class="gallery-image-container">
+                            <img src="/uploads/events/event1-1.jpg" class="gallery-image" alt="Tech Conference 2023" loading="lazy">
+                        </div>
+                        <div class="gallery-content expandable-content">
+                            <h3 class="gallery-title">Tech Conference 2023</h3>
+                            <p class="gallery-description">Speaker at the annual national tech conference, discussing the future of web development and serverless architecture.</p>
+                            <small class="tech-badge">October 15, 2023</small>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-4 col-md-6">
+                    <div class="gallery-card glass fade-in">
+                        <div class="gallery-image-container">
+                            <img src="/uploads/events/event2-1.jpg" class="gallery-image" alt="Hackathon Champions" loading="lazy">
+                        </div>
+                        <div class="gallery-content expandable-content">
+                            <h3 class="gallery-title">Hackathon Champions</h3>
+                            <p class="gallery-description">Led my team to victory at the 24-hour city-wide hackathon with our innovative solution for urban mobility.</p>
+                            <small class="tech-badge">June 5, 2022</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Let's Build Something Amazing</h2>
+            <div class="contact-form">
+                <form id="contactForm" class="fade-in">
+                    <div class="form-group">
+                        <input type="text" class="form-control-custom" id="name" placeholder=" " required>
+                        <label class="form-label" for="name">Full Name</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" class="form-control-custom" id="email" placeholder=" " required>
+                        <label class="form-label" for="email">Email Address</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" class="form-control-custom" id="subject" placeholder=" " required>
+                        <label class="form-label" for="subject">Subject</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea class="form-control-custom" id="message" rows="5" placeholder=" " required></textarea>
+                        <label class="form-label" for="message">Message</label>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary-custom">
+                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/kuuhaku3614" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gerby-hallasgo-8829b0370/" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/gerby.hallasgo.35" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <p class="text-muted">
+                © 2025 Gerby Hallasgo. Crafted with <i class="fas fa-heart text-danger"></i> and lots of <i class="fas fa-coffee"></i>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
