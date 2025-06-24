@@ -45,8 +45,8 @@ function initializePage() {
     initThemeToggle();
     initCustomModalsAndAlerts();
     initExpandableCards();
-    initCvDownload(); // <-- New function call
-    initProjectImageClick(); // <-- New function call
+    initCvDownload();
+    initImageModal(); // MODIFICATION: Replaced initProjectImageClick
 }
 
 
@@ -329,7 +329,7 @@ function initExpandableCards() {
 }
 
 /**
- * NEW: Initializes the CV download functionality.
+ * Initializes the CV download functionality.
  */
 function initCvDownload() {
     const downloadButton = document.getElementById('downloadCvBtn');
@@ -346,32 +346,57 @@ function initCvDownload() {
 }
 
 /**
- * NEW: Makes project images clickable to open in a new tab.
+ * MODIFICATION: Initializes the image modal for project images and icons.
  */
-function initProjectImageClick() {
-    const projectImages = document.querySelectorAll('.project-image');
-    projectImages.forEach(imageContainer => {
-        imageContainer.addEventListener('click', (e) => {
-            // Prevent clicks on overlay icons from triggering this
+function initImageModal() {
+    const imageModalEl = document.getElementById('imageModal');
+    if (!imageModalEl) return;
+
+    const imageModal = new bootstrap.Modal(imageModalEl);
+    const modalImageEl = document.getElementById('modalImage');
+
+    const openModal = (imageUrl) => {
+        if (imageUrl && modalImageEl) {
+            modalImageEl.src = imageUrl;
+            imageModal.show();
+        }
+    };
+
+    document.querySelectorAll('.project-image').forEach(container => {
+        container.addEventListener('click', (e) => {
             if (e.target.closest('.project-overlay')) {
                 return;
             }
 
             let imageUrl = '';
+            const imgElement = container.querySelector('img');
+
+            if (imgElement) {
+                imageUrl = imgElement.src;
+            } else if (container.style.backgroundImage) {
+                imageUrl = container.style.backgroundImage.slice(5, -2);
+            }
+            openModal(imageUrl);
+        });
+    });
+
+    document.querySelectorAll('.fa-images').forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const imageContainer = e.target.closest('.project-card')?.querySelector('.project-image');
+            if (!imageContainer) return;
+            
+            let imageUrl = '';
             const imgElement = imageContainer.querySelector('img');
 
             if (imgElement) {
-                // Case 1: The image is an <img> tag
                 imageUrl = imgElement.src;
             } else if (imageContainer.style.backgroundImage) {
-                // Case 2: The image is a CSS background-image
-                // Extracts URL from 'url("...")'
                 imageUrl = imageContainer.style.backgroundImage.slice(5, -2);
             }
-
-            if (imageUrl) {
-                window.open(imageUrl, '_blank');
-            }
+            openModal(imageUrl);
         });
     });
 }

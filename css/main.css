@@ -28,21 +28,64 @@ body {
     line-height: 1.6;
 }
 
-/* MODIFICATION: Make project image clickable with a pointer */
-.project-image.clickable-project {
-    cursor: pointer;
+.tech-badge {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--accent-primary);
 }
 
-/* --- MODIFICATION: Gallery Card Styling Update --- */
-.gallery-card {
-    cursor: default; /* Changed from pointer */
-    position: relative; /* Needed to anchor the show-more button */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* MODIFICATION: Image Modal Styling */
+.image-modal-dialog {
+    max-width: 90vw;
+    width: auto;
+    margin: 1.75rem auto;
 }
 
-.gallery-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+.image-modal-content {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    box-shadow: var(--shadow-glow);
+    overflow: hidden;
+}
+
+.image-modal-content .modal-body {
+    position: relative;
+    padding: 0;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 85vh; /* Prevents image from being too tall on large screens */
+    object-fit: contain; /* Ensures the whole image is visible without cropping */
+}
+
+.image-modal-content .btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    filter: invert(1) grayscale(100%) brightness(200%);
+    padding: 0.5rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.image-modal-content .btn-close:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* NEW: Styles for expandable card content */
+.expandable-content {
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.6s ease-in-out;
+    position: relative;
 }
 
 /* MODIFICATION: New container for the clickable image */

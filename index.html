@@ -199,8 +199,8 @@
                                 <a class="project-link no-link-popup" aria-label="Live Preview">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a class="project-link no-link-popup" aria-label="GitHub Repository">
-                                    <i class="fab fa-github"></i>
+                                <a class="project-link" aria-label="View Photos">
+                                       <i class="fas fa-images"></i>
                                 </a>
                             </div>
                         </div>
@@ -455,6 +455,17 @@
             </p>
         </div>
     </footer>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered image-modal-dialog">
+        <div class="modal-content image-modal-content">
+          <div class="modal-body p-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <img src="" class="img-fluid modal-image" id="modalImage" alt="Project Image">
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
