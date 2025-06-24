@@ -282,7 +282,7 @@ body.dark-theme {
 .hero-title {
     font-size: clamp(2rem, 6vw, 6rem);
     font-weight: 700;
-    line-height: 0.9;
+    line-height: 1.2; /* <--- Adjust this value */
     margin-bottom: 2rem;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     -webkit-background-clip: text;
