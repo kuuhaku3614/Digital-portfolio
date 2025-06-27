@@ -757,7 +757,7 @@ body.dark-theme {
 
 .metrics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minminmax(200px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -829,7 +829,249 @@ body.dark-theme {
     .hero-title { font-size: 2rem; }
     .hero-subtitle { font-size: 1.2rem; }
     .floating-code { display: none; }
+
+    /* Center text for smaller screens */
+    .hero-content {
+        text-align: center;
+    }
+    .hero .d-flex {
+        justify-content: center;
+    }
+    .about-content p {
+        text-align: center;
+    }
+    .section-title {
+        font-size: 2rem; /* Adjusted for smaller screens */
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust grid for skills */
+    }
+    .skill-card {
+        padding: 1.5rem; /* Reduce padding for skill cards */
+    }
+    .project-card {
+        height: auto; /* Allow height to adjust */
+    }
+    .project-image {
+        height: 150px; /* Smaller image height for projects */
+    }
+    .project-content {
+        padding: 1rem; /* Reduce project card padding */
+    }
+    .project-title {
+        font-size: 1.1rem; /* Smaller project title */
+    }
+    .project-description {
+        font-size: 0.8rem; /* Smaller project description */
+    }
+    .tech-badge {
+        font-size: 0.7rem; /* Smaller tech badge font */
+    }
+    .timeline-content {
+        padding: 1rem; /* Reduce timeline content padding */
+    }
+    .form-control-custom {
+        padding: 0.8rem; /* Smaller form control padding */
+    }
+    .form-label {
+        top: 0.8rem; /* Adjust form label position */
+        left: 0.8rem;
+    }
+    .form-control-custom:focus + .form-label,
+    .form-control-custom:not(:placeholder-shown) + .form-label {
+        top: -6px; /* Adjust lifted label position */
+        left: 10px;
+        font-size: 0.7rem;
+    }
+    .btn-primary-custom, .btn-outline-custom {
+        padding: 10px 24px; /* Smaller button padding */
+        font-size: 0.9rem;
+    }
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
 }
+
+@media (max-width: 425px) {
+    .section {
+        padding: 4rem 0; /* Reduce section padding */
+    }
+    .section-title {
+        margin-bottom: 2rem; /* Reduce section title margin */
+    }
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .hero-title {
+        font-size: clamp(1.8rem, 10vw, 3rem); /* Further adjust hero title */
+    }
+    .hero-subtitle {
+        font-size: clamp(1rem, 5vw, 1.5rem); /* Further adjust hero subtitle */
+    }
+    .d-flex.flex-wrap {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+        gap: 1rem;
+    }
+    .btn-primary-custom, .btn-outline-custom {
+        width: 100%; /* Make buttons full width */
+        max-width: 250px; /* Limit max width for better appearance */
+    }
+    .profile-photo {
+        width: 180px; /* Smaller profile photo */
+        height: 180px;
+    }
+    .about-content {
+        margin-top: 1.5rem;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr; /* Single column for skills */
+        gap: 1.5rem;
+    }
+    .skill-card {
+        padding: 1.2rem;
+    }
+    .project-card {
+        margin-bottom: 1.5rem; /* Add margin between stacked project cards */
+    }
+    .timeline-item {
+        padding-left: 25px; /* Adjust padding for timeline items */
+    }
+    .timeline-dot {
+        left: 0px; /* Adjust dot position for single column timeline */
+    }
+    .contact-form {
+        padding: 0 10px; /* Adjust form padding */
+    }
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    .footer .container {
+        padding: 0 15px;
+    }
+    .social-links {
+        gap: 1rem; /* Smaller gap for social links */
+    }
+    .social-link {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: clamp(1.5rem, 9vw, 2.5rem); /* Fine-tune hero title for very small screens */
+    }
+    .hero-subtitle {
+        font-size: clamp(0.9rem, 4.5vw, 1.3rem); /* Fine-tune hero subtitle */
+    }
+    .profile-photo {
+        width: 150px; /* Even smaller profile photo */
+        height: 150px;
+    }
+    .skill-icon {
+        font-size: 2.5rem; /* Smaller skill icons */
+    }
+    .project-image {
+        height: 120px; /* Even smaller project image height */
+    }
+    .project-title {
+        font-size: 1rem; /* Even smaller project title */
+    }
+    .project-description {
+        font-size: 0.75rem; /* Even smaller project description */
+    }
+    .tech-badge {
+        font-size: 0.65rem; /* Even smaller tech badge font */
+    }
+    .metric-value {
+        font-size: 2rem; /* Smaller metric values */
+    }
+    .metric-label {
+        font-size: 0.8rem; /* Smaller metric labels */
+    }
+    
+}
+
+@media (max-width: 320px) {
+    .section {
+        padding: 3rem 0;
+    }
+    .hero-title {
+        font-size: 1.6rem; /* Smallest hero title */
+    }
+    .hero-subtitle {
+        font-size: 0.85rem; /* Smallest hero subtitle */
+    }
+    .btn-primary-custom, .btn-outline-custom {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .skills-grid {
+        gap: 1rem;
+    }
+    .skill-card {
+        padding: 1rem;
+    }
+    .project-content {
+        padding: 0.8rem;
+    }
+    .project-title {
+        font-size: 0.9rem;
+    }
+    .project-description {
+        font-size: 0.7rem;
+    }
+    .tech-stack {
+        gap: 0.3rem;
+    }
+    .tech-badge {
+        padding: 3px 8px;
+        font-size: 0.6rem;
+    }
+    .timeline-content h3 {
+        font-size: 1rem;
+    }
+    .timeline-content h4 {
+        font-size: 0.8rem;
+    }
+    .timeline-content p {
+        font-size: 0.8rem;
+    }
+    .form-control-custom {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+    .form-label {
+        top: 0.6rem;
+        left: 0.6rem;
+        font-size: 0.7rem;
+    }
+    .form-control-custom:focus + .form-label,
+    .form-control-custom:not(:placeholder-shown) + .form-label {
+        top: -4px;
+        left: 8px;
+        font-size: 0.6rem;
+    }
+    .footer p {
+        font-size: 0.8rem;
+    }
+    .about-content p{
+        font-size: 10px;
+    }
+}
+
 
 .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
