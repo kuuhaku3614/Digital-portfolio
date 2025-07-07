@@ -408,7 +408,7 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const formStatus = document.createElement('div');
-        formStatus.textContent = 'Form submitted (Placeholder)! This would send data to a server in a real app.';
+        formStatus.textContent = 'Form submitted (NO BACKEND YET)';
         formStatus.style.color = 'var(--accent-primary)';
         formStatus.style.marginTop = '1rem';
         formStatus.style.textAlign = 'center';
