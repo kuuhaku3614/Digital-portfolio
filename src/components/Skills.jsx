@@ -8,8 +8,8 @@ export default function Skills() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Skills"
-          title="Skill set organized the way recruiters scan portfolios."
-          description="Instead of fake progress bars, this layout groups tools by practical use so hiring teams understand where each skill fits."
+          
+          
         />
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">

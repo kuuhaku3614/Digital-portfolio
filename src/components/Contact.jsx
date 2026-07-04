@@ -27,7 +27,7 @@ export default function Contact() {
           <SectionHeading
             eyebrow="Contact"
             title="Let’s build something useful."
-            description="This is a static portfolio, so contact actions use email and profile links instead of a backend form."
+            
           />
 
           <div className="grid gap-4 md:grid-cols-3">

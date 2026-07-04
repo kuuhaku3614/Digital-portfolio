@@ -15,7 +15,7 @@ export default function About() {
         <SectionHeading
           eyebrow="About"
           title="A practical developer who values clarity, teamwork, and steady growth."
-          description="The goal of this portfolio is not just to look modern, but to quickly show what I can build, how I think, and why I am a strong junior candidate."
+          
         />
 
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">

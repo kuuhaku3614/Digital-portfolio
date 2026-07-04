@@ -13,8 +13,7 @@ export default function Projects() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Projects"
-          title="Featured work presented as clear case studies."
-          description="Each card highlights what the project solves, what technologies were used, and what a recruiter should notice first."
+          
         />
 
         <div className="grid gap-6 lg:grid-cols-2">

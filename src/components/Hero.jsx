@@ -17,7 +17,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Hi, I’m <span className="font-semibold text-white">Gerby P. Hallasgo</span> — an aspiring developer focused on Laravel, React, database-driven systems, and real-world software workflows.
+            Hi, I’m <span className="font-semibold text-white">Gerby P. Hallasgo</span> — an aspiring developer focused on Laravel, Tauri, React, database-driven systems, and real-world software workflows.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

@@ -8,8 +8,7 @@ export default function Timeline() {
       <div className="mx-auto max-w-5xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Journey"
-          title="A simple timeline that connects education, projects, and growth."
-          description="This section replaces a long experience list with a focused path that makes sense for a fresh graduate."
+          
         />
 
         <div className="relative">
