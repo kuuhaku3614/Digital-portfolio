@@ -3,6 +3,7 @@ import SectionHeading from './SectionHeading';
 
 const quickFacts = [
   ['Education', 'BS Computer Science'],
+  ['Research', 'IEEE-published thesis paper'],
   ['Location', 'Philippines'],
   ['Work setup', 'Remote-friendly / WFH'],
   ['Best fit', 'Junior software, full-stack, Laravel roles'],

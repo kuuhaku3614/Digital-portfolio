@@ -5,6 +5,41 @@ const gym = 'https://github.com/kuuhaku3614/Gym_MembershipSE-XLB';
 
 export const projects = [
   {
+    id: 'credential-verification',
+    title: 'Blockchain Credential Verification System',
+    category: 'Credential Verification',
+    year: '2026',
+    status: 'IEEE Published',
+    role: 'Assistant Developer',
+    stack: ['Polygon', 'IPFS', 'MetaMask', 'Blockchain', 'Off-chain Storage'],
+    image: `${import.meta.env.BASE_URL}thesis.png`,
+    publication: {
+      // TODO: replace with the exact paper title as it appears on IEEE Xplore
+      title: 'Blockchain Credential Verification System',
+      venue: 'IEEE Xplore',
+      year: '2026',
+      url: 'https://ieeexplore.ieee.org/document/11594360',
+      cert: `${import.meta.env.BASE_URL}ieee-cert.pdf`,
+    },
+    summary:
+      'A credential verification concept using blockchain validation, off-chain storage, wallet interaction, and tamper-resistant record checking.',
+    problem:
+      'Credential records can be difficult to validate quickly when institutions need proof that a document is authentic and unchanged.',
+    solution:
+      'Used blockchain record validation with off-chain storage to support verification accuracy while keeping heavy document files outside the chain.',
+    highlights: [
+      'Thesis paper presented at an IEEE conference and published on IEEE Xplore.',
+      'Blockchain validation flow for credential authenticity checks.',
+      'IPFS/off-chain storage approach for files and supporting metadata.',
+      'MetaMask interaction concept for wallet-based verification workflows.',
+      'Research-oriented testing around validation accuracy, latency, and gas usage.',
+    ],
+    impact:
+      'Peer-reviewed research published on IEEE Xplore — shows the ability to take emerging technology from concept to a validated, published result.',
+    github: thesis,
+    demo: '',
+  },
+  {
     id: 'aquabill',
     title: 'AquaBill — Water Billing Management System',
     category: 'Desktop Billing System',
@@ -54,32 +89,6 @@ export const projects = [
     impact:
       'Demonstrates CRUD development, database design, dashboard thinking, and software engineering teamwork.',
     github: gym,
-    demo: '',
-  },
-  {
-    id: 'credential-verification',
-    title: 'Blockchain Credential Verification System',
-    category: 'Credential Verification',
-    year: '2026',
-    status: 'Thesis / Research Project',
-    role: 'Assistant Developer',
-    stack: ['Polygon', 'IPFS', 'MetaMask', 'Blockchain', 'Off-chain Storage'],
-    image: `${import.meta.env.BASE_URL}thesis.png`,
-    summary:
-      'A credential verification concept using blockchain validation, off-chain storage, wallet interaction, and tamper-resistant record checking.',
-    problem:
-      'Credential records can be difficult to validate quickly when institutions need proof that a document is authentic and unchanged.',
-    solution:
-      'Used blockchain record validation with off-chain storage to support verification accuracy while keeping heavy document files outside the chain.',
-    highlights: [
-      'Blockchain validation flow for credential authenticity checks.',
-      'IPFS/off-chain storage approach for files and supporting metadata.',
-      'MetaMask interaction concept for wallet-based verification workflows.',
-      'Research-oriented testing around validation accuracy, latency, and gas usage.',
-    ],
-    impact:
-      'Shows willingness to explore emerging technologies and understand tradeoffs between usability, cost, and technical architecture.',
-    github: thesis,
     demo: '',
   },
 ];

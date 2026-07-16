@@ -1,6 +1,13 @@
 export const timeline = [
   {
     period: '2026',
+    title: 'IEEE Research Publication',
+    label: 'IEEE Xplore • Thesis Paper',
+    description:
+      'Presented our thesis on blockchain-based credential verification at an IEEE conference; the paper is now published on IEEE Xplore (document 11594360).',
+  },
+  {
+    period: '2026',
     title: 'Fresh Computer Science Graduate',
     label: 'Western Mindanao State University',
     description:

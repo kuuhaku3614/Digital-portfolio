@@ -23,9 +23,18 @@ export default function ProjectCard({ project, onViewDetails }) {
       <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900">
         <img src={project.image} alt="" className="h-56 w-full object-cover opacity-85 transition duration-500 group-hover:scale-105 group-hover:opacity-100" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
-        <div className="absolute left-4 top-4 rounded-full border border-cyan-300/20 bg-slate-950/70 px-3 py-1 text-xs font-semibold text-cyan-100 backdrop-blur">
-          {project.status}
-        </div>
+        {project.publication ? (
+          <div className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full border border-amber-300/40 bg-slate-950/80 px-3 py-1 text-xs font-semibold text-amber-200 shadow-[0_0_18px_rgba(251,191,36,0.35)] backdrop-blur">
+            <svg viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" aria-hidden="true">
+              <path fillRule="evenodd" d="M10 1a4.5 4.5 0 0 0-4.5 4.5c0 1.61.846 3.023 2.118 3.818L6.5 18l3.5-2 3.5 2-1.118-8.682A4.497 4.497 0 0 0 14.5 5.5 4.5 4.5 0 0 0 10 1Z" clipRule="evenodd" />
+            </svg>
+            {project.status}
+          </div>
+        ) : (
+          <div className="absolute left-4 top-4 rounded-full border border-cyan-300/20 bg-slate-950/70 px-3 py-1 text-xs font-semibold text-cyan-100 backdrop-blur">
+            {project.status}
+          </div>
+        )}
       </div>
 
       <div className="p-6">
@@ -48,7 +57,11 @@ export default function ProjectCard({ project, onViewDetails }) {
 
         <div className="mt-6 grid gap-2 sm:grid-cols-3">
           <ProjectButton href={project.github}>GitHub</ProjectButton>
-          <ProjectButton href={project.demo}>Live Demo</ProjectButton>
+          {project.publication && !project.demo ? (
+            <ProjectButton href={project.publication.url}>IEEE Paper</ProjectButton>
+          ) : (
+            <ProjectButton href={project.demo}>Live Demo</ProjectButton>
+          )}
           <button type="button" className="btn-card-primary" onClick={() => onViewDetails(project)}>
             View Details
           </button>

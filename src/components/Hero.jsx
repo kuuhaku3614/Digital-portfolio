@@ -8,9 +8,22 @@ export default function Hero() {
     <section id="home" className="relative overflow-hidden pb-20 pt-32 sm:pt-40 lg:min-h-screen lg:pb-28">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
         <Reveal>
-          <p className="mb-5 inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100">
-            Fresh Computer Science Graduate • Open to remote-friendly roles
-          </p>
+          <div className="mb-5 flex flex-wrap gap-3">
+            <p className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100">
+              Fresh Computer Science Graduate • Open to remote-friendly roles
+            </p>
+            <a
+              href="https://ieeexplore.ieee.org/document/11594360"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-amber-300/30 bg-amber-300/10 px-4 py-2 text-sm font-medium text-amber-200 transition hover:bg-amber-300/20"
+            >
+              <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden="true">
+                <path fillRule="evenodd" d="M10 1a4.5 4.5 0 0 0-4.5 4.5c0 1.61.846 3.023 2.118 3.818L6.5 18l3.5-2 3.5 2-1.118-8.682A4.497 4.497 0 0 0 14.5 5.5 4.5 4.5 0 0 0 10 1Z" clipRule="evenodd" />
+              </svg>
+              IEEE-Published Researcher
+            </a>
+          </div>
 
           <h1 className="max-w-4xl text-4xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl">
             I build practical full-stack systems with clean, recruiter-friendly interfaces.
