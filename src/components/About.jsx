@@ -6,7 +6,7 @@ const quickFacts = [
   ['Research', 'IEEE-published thesis paper'],
   ['Location', 'Philippines'],
   ['Work setup', 'Remote-friendly / WFH'],
-  ['Best fit', 'Junior software, full-stack, Laravel roles'],
+  ['Best fit', 'Junior software, full-stack, Web, or Laravel developer'],
 ];
 
 export default function About() {

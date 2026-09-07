@@ -8,6 +8,13 @@ export const timeline = [
   },
   {
     period: '2026',
+    title: 'Blockchain Credential Verification System',
+    label: 'Polygon + IPFS + MetaMask',
+    description:
+      'Built a blockchain-based credential verification concept with off-chain storage and wallet interaction, forming the basis of our IEEE-published thesis.',
+  },
+  {
+    period: '2026',
     title: 'Fresh Computer Science Graduate',
     label: 'Western Mindanao State University',
     description:
@@ -26,12 +33,5 @@ export const timeline = [
     label: 'Lead Developer',
     description:
       'Led development of a PHP/MySQL membership system covering member records, payment tracking, attendance, dashboards, and future QR check-in planning.',
-  },
-  {
-    period: '2024',
-    title: 'Social Welfare Program System',
-    label: 'Database / Web System',
-    description:
-      'Built a PHP/MySQL system for applicant records, program participation, requirements, and report generation for administrative workflows.',
   },
 ];

@@ -1,6 +1,6 @@
 import Reveal from './Reveal';
 
-const roles = ['Junior Software Developer', 'Full Stack Developer', 'Laravel Developer'];
+const roles = ['Junior Software Developer', 'Full Stack Developer', 'Web Developer'];
 const strengths = ['Teachable', 'Reliable', 'Collaborative', 'Remote-friendly'];
 
 export default function Hero() {
@@ -30,7 +30,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Hi, I’m <span className="font-semibold text-white">Gerby P. Hallasgo</span> — an aspiring developer focused on Laravel, Tauri, React, database-driven systems, and real-world software workflows.
+            Hi, I’m <span className="font-semibold text-white">Gerby P. Hallasgo</span> — an aspiring developer focused on Tauri, React, database-driven systems, and real-world software workflows.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -68,7 +68,7 @@ export default function Hero() {
             <div className="mt-6 space-y-4">
               <div className="rounded-2xl border border-white/10 bg-slate-950/60 p-4">
                 <p className="text-sm text-slate-400">Current focus</p>
-                <p className="mt-1 font-semibold text-white">React + Laravel + MySQL systems</p>
+                <p className="mt-1 font-semibold text-white">Tauri + React Native + Expo + NativeWind</p>
               </div>
               <div className="grid grid-cols-2 gap-3">
                 {strengths.map((item) => (

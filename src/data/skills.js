@@ -12,7 +12,7 @@ export const skillGroups = [
   {
     title: 'Database',
     description: 'Designing normalized data structures for real systems.',
-    items: ['SQL', 'MySQL', 'Database Design', 'Reports'],
+    items: ['SQL', 'MySQL', 'Supabase', 'Database Design', 'Reports'],
   },
   {
     title: 'Tools & Platforms',
@@ -22,6 +22,6 @@ export const skillGroups = [
   {
     title: 'Desktop & Mobile',
     description: 'Exploring cross-platform app development workflows.',
-    items: ['Tauri', 'React Native', 'Expo', 'QR features', 'PDF generation'],
+    items: ['Tauri', 'React Native', 'Expo', 'NativeWind', 'React Native Reanimated', 'React Native Gesture Handler', 'Lucide Icons', 'QR features', 'PDF generation'],
   },
 ];
